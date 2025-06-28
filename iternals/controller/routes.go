@@ -13,9 +13,9 @@ func RunServer() error {
 		authGroup.POST("/sign-in", SignIn)
 	}
 
-	infoGroup := router.Group("/verification")
+	infoGroup := router.Group("/verify")
 	{
-		infoGroup.POST("/info", UpdateAccountInfo)
+		infoGroup.PUT("/info", UpdateAccountInfo)
 	}
 
 	adminGroup := router.Group("/admin")

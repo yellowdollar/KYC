@@ -119,3 +119,23 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN] 2025/06/28 - 15:53:26 | 200 |    1.391793ms |       127.0.0.1 | POST     "/admin/sign-in?login=superadmin&password=superadmin"
 [GIN] 2025/06/28 - 15:53:40 | 401 |    1.569034ms |       127.0.0.1 | POST     "/admin/sign-in?login=test&password=qweasd"
 [GIN] 2025/06/28 - 15:53:47 | 200 |    1.110981ms |       127.0.0.1 | POST     "/admin/sign-in?login=superadmin&password=superadmin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
+[GIN-debug] POST   /admin/sign-in            --> KYC/iternals/controller.AdminSingIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 16:43:35 | 404 |     668.935µs |       127.0.0.1 | POST     "/auth/sign-in?login=testlogin&password=testpassword"
+[GIN] 2025/06/28 - 16:43:47 | 200 |    9.977204ms |       127.0.0.1 | POST     "/auth/sign-up?login=testlogin&password=testpassword"
+[GIN] 2025/06/28 - 16:44:19 | 200 |     393.157µs |       127.0.0.1 | POST     "/auth/sign-in?login=testlogin&password=testpassword"
+[GIN] 2025/06/28 - 16:46:59 | 404 |         871ns |       127.0.0.1 | GET      "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
+[GIN] 2025/06/28 - 16:47:01 | 404 |         561ns |       127.0.0.1 | GET      "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
+[GIN] 2025/06/28 - 16:47:21 | 200 |   10.297324ms |       127.0.0.1 | POST     "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
