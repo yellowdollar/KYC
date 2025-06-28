@@ -20,7 +20,7 @@ func RunServer() error {
 
 	adminGroup := router.Group("/admin")
 	{
-		adminGroup.POST("/create-admin", CreateAdmin)
+		adminGroup.POST("/create", CreateAdmin)
 		adminGroup.POST("/sign-in", AdminSingIn)
 	}
 

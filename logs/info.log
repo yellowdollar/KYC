@@ -139,3 +139,17 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN] 2025/06/28 - 16:46:59 | 404 |         871ns |       127.0.0.1 | GET      "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
 [GIN] 2025/06/28 - 16:47:01 | 404 |         561ns |       127.0.0.1 | GET      "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
 [GIN] 2025/06/28 - 16:47:21 | 200 |   10.297324ms |       127.0.0.1 | POST     "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] PUT    /verify/info              --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
+[GIN-debug] POST   /admin/sign-in            --> KYC/iternals/controller.AdminSingIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
