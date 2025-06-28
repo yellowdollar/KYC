@@ -1,0 +1,121 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 13:59:20 | 401 |     734.375µs |       127.0.0.1 | POST     "/auth/sign-in?login=dllr&password=934007717"
+[GIN] 2025/06/28 - 13:59:21 | 401 |     389.514µs |       127.0.0.1 | POST     "/auth/sign-in?login=dllr&password=934007717"
+[GIN] 2025/06/28 - 13:59:56 | 200 |    1.049572ms |       127.0.0.1 | POST     "/auth/sign-up?login=dllr&password=934007717asd"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 14:09:13 | 200 |    8.572968ms |       127.0.0.1 | POST     "/auth/sign-up?login=dllr55&password=934007717asd"
+[GIN] 2025/06/28 - 14:09:20 | 200 |     652.127µs |       127.0.0.1 | POST     "/auth/sign-in?login=dllr55&password=934007717asd"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 14:40:12 | 200 |    9.947082ms |       127.0.0.1 | POST     "/auth/sign-up?login=test&password=asdqwe"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 14:49:54 | 404 |     535.542µs |       127.0.0.1 | POST     "/auth/sign-in?login=test?password=qweasd"
+[GIN] 2025/06/28 - 14:50:06 | 200 |   10.470536ms |       127.0.0.1 | POST     "/auth/sign-up?login=test1?password=qwe"
+[GIN] 2025/06/28 - 14:50:12 | 200 |     444.431µs |       127.0.0.1 | POST     "/auth/sign-in?login=test1?password=qwe"
+[GIN] 2025/06/28 - 14:51:03 | 200 |    9.537069ms |       127.0.0.1 | POST     "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJsb2dpbiI6InRlc3QxP3Bhc3N3b3JkPXF3ZSIsImlzcyI6IktZQyJ9.ycJ4IgW1h3GtLXCoQGWTh2DGIFlHdrFzcxnVDOWSRB4&name=Amirjon&surname=Kadirov&male=male&age=20"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 15:45:49 | 200 |    3.310819ms |       127.0.0.1 | POST     "/admin/create-admin?login=superadmin&password=superadmin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
+[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
+[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
+[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
+[GIN-debug] POST   /admin/sign-in            --> KYC/iternals/controller.AdminSingIn (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/06/28 - 15:53:26 | 200 |    1.391793ms |       127.0.0.1 | POST     "/admin/sign-in?login=superadmin&password=superadmin"
+[GIN] 2025/06/28 - 15:53:40 | 401 |    1.569034ms |       127.0.0.1 | POST     "/admin/sign-in?login=test&password=qweasd"
+[GIN] 2025/06/28 - 15:53:47 | 200 |    1.110981ms |       127.0.0.1 | POST     "/admin/sign-in?login=superadmin&password=superadmin"
