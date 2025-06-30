@@ -4,52 +4,92 @@ import (
 	"KYC/iternals/models"
 	"KYC/iternals/service"
 	"KYC/utils"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
+// SignUp godoc
+// @Tags Auth
+// @title SignUp endpoint
+// @version v1.0
+// @description Login & password registration
+// @Accept json
+// @Produce json
+// @Param userSignUp body models.UserSignUp true "User data"
+// @Success 201 {string} User Created Successfully
+// @Failure 400 {object} map[string]string
+// @Router /auth/sign-up [post]
 func SignUp(c *gin.Context) {
-	login := c.Query("login")
-	password := c.Query("password")
+	var u models.User
 
-	var u = models.User{
-		Login:    login,
-		Password: password,
-	}
+	if err := c.ShouldBindJSON(&u); err != nil {
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
+			"status_code":   400,
+			"error_message": err.Error(),
+		})
 
-	result, err := service.CreateUser(u)
-	if err != nil {
-		c.JSON(400, gin.H{"status_code": 400, "error_message": err.Error()})
 		return
 	}
 
-	c.JSON(200, gin.H{"status_code": 200, "data": result})
+	if result, err := service.CreateUser(u); err != nil {
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
+			"status_code":   400,
+			"error_message": err.Error(),
+		})
+
+		return
+	} else {
+		c.JSON(http.StatusCreated, gin.H{
+			"status_code": 201,
+			"data":        result,
+		})
+	}
 }
 
+// SignIn godoc
+// @Tags Auth
+// @title SignIn
+// @version v1.0
+// @description Sign In endpoint
+// @Access json
+// @Produce json
+// @Param userSignIn body models.UserSignIn true "User Data"
+// @Success 200 {object} map[string]string
+// @Failure 400 {object} map[string]string
+// @Router /auth/sign-in [post]
 func SignIn(c *gin.Context) {
-	userLogin := c.Query("login")
-	userPassword := c.Query("password")
-	// get user by login
-	result, err := service.GetUserByLogin(userLogin)
+	var u models.UserSignIn
+
+	if err := c.ShouldBindJSON(&u); err != nil {
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
+			"status_code":   400,
+			"error_message": err.Error(),
+		})
+
+		return
+	}
+
+	user, err := service.GetUserByLogin(u.Login)
 	if err != nil {
-		c.JSON(404, gin.H{"status_code": 404, "error_message": "User not found"})
+		c.AbortWithStatusJSON(http.StatusNotFound, gin.H{
+			"status_code":   404,
+			"error_message": "Wrong login or Password",
+		})
+
 		return
 	}
 
-	// comparing input password and real password
-	checkPassword := service.ComparePasswords(userPassword, result.Password)
-	if !checkPassword {
-		c.JSON(401, gin.H{"status_code": 401, "error_message": "Wrong login or password"})
-		return
-	}
-
-	// generate token
-	token, err := utils.GenerateToken(int(result.ID), result.Login)
+	token, err := utils.GenerateToken(int(user.ID), user.Login, user.Role)
 	if err != nil {
-		c.JSON(400, gin.H{"status_code": 400, "error_message": "Error during singin proccess"})
-		return
+		c.AbortWithStatusJSON(400, gin.H{
+			"status_code":   400,
+			"error_message": err.Error(),
+		})
 	}
 
-	// returning token
-	c.JSON(200, gin.H{"status_code": 200, "access_token": token, "token_type": "Bearer"})
+	c.JSON(http.StatusOK, gin.H{
+		"access_token": token,
+		"token_type":   "Bearer",
+	})
 }

@@ -3,34 +3,77 @@ package repository
 import (
 	"KYC/iternals/db"
 	"KYC/iternals/models"
+	"fmt"
+	"strconv"
 )
 
-func CreateAdmin(a models.Admin) (*models.Admin, error) {
+func CheckRoleByUserID(userID int) (string, error) {
+
 	dbcon, err := db.GetDBConn()
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
-	result := dbcon.Create(&a)
+	var u models.User
+
+	result := dbcon.Where("id = ?", userID).Take(&u)
 	if result.Error != nil {
-		return nil, err
+		return "", result.Error
 	}
 
-	return &a, err
+	return u.Role, nil
 }
 
-func GetAdminByLogin(adminLogin string) (*models.Admin, error) {
+func GetUsers(userID string, filterStatus string) ([]models.User, error) {
 	dbcon, err := db.GetDBConn()
 	if err != nil {
 		return nil, err
 	}
 
-	var admin = models.Admin{}
+	var users []models.User
 
-	result := dbcon.Where("login = ?", adminLogin).First(&admin)
-	if result.Error != nil {
-		return nil, result.Error
+	query := dbcon.Where("role <> ?", "admin")
+
+	if userID != "" {
+		userIDint, err := strconv.Atoi(userID)
+		if err != nil {
+			return nil, err
+		}
+
+		query = query.Where("id = ?", userIDint)
+	} else if filterStatus != "" {
+		query = query.Where("is_identified = ?", filterStatus)
 	}
 
-	return &admin, nil
+	query.Find(&users)
+	if query.Error != nil {
+		return nil, query.Error
+	}
+
+	return users, nil
+}
+
+func ConfirmUserIdentifyStatus(userID int) (*models.User, error) {
+	dbcon, err := db.GetDBConn()
+	if err != nil {
+		return nil, err
+	}
+
+	user, err := GetUserByID(userID)
+	if err != nil {
+		return nil, err
+	}
+
+	if user.IsIdentified == "pending" {
+		user.IsIdentified = "identified"
+	} else {
+		return nil, fmt.Errorf("cannot confirm user: status is: %s", user.IsIdentified)
+	}
+
+	result := dbcon.Save(&user)
+	if result.Error != nil {
+		return nil, err
+	}
+
+	return user, nil
 }

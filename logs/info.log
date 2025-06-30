@@ -1,155 +1,196 @@
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 13:59:20 | 401 |     734.375µs |       127.0.0.1 | POST     "/auth/sign-in?login=dllr&password=934007717"
-[GIN] 2025/06/28 - 13:59:21 | 401 |     389.514µs |       127.0.0.1 | POST     "/auth/sign-in?login=dllr&password=934007717"
-[GIN] 2025/06/28 - 13:59:56 | 200 |    1.049572ms |       127.0.0.1 | POST     "/auth/sign-up?login=dllr&password=934007717asd"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 14:09:13 | 200 |    8.572968ms |       127.0.0.1 | POST     "/auth/sign-up?login=dllr55&password=934007717asd"
-[GIN] 2025/06/28 - 14:09:20 | 200 |     652.127µs |       127.0.0.1 | POST     "/auth/sign-in?login=dllr55&password=934007717asd"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 14:40:12 | 200 |    9.947082ms |       127.0.0.1 | POST     "/auth/sign-up?login=test&password=asdqwe"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 14:49:54 | 404 |     535.542µs |       127.0.0.1 | POST     "/auth/sign-in?login=test?password=qweasd"
-[GIN] 2025/06/28 - 14:50:06 | 200 |   10.470536ms |       127.0.0.1 | POST     "/auth/sign-up?login=test1?password=qwe"
-[GIN] 2025/06/28 - 14:50:12 | 200 |     444.431µs |       127.0.0.1 | POST     "/auth/sign-in?login=test1?password=qwe"
-[GIN] 2025/06/28 - 14:51:03 | 200 |    9.537069ms |       127.0.0.1 | POST     "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJsb2dpbiI6InRlc3QxP3Bhc3N3b3JkPXF3ZSIsImlzcyI6IktZQyJ9.ycJ4IgW1h3GtLXCoQGWTh2DGIFlHdrFzcxnVDOWSRB4&name=Amirjon&surname=Kadirov&male=male&age=20"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 15:45:49 | 200 |    3.310819ms |       127.0.0.1 | POST     "/admin/create-admin?login=superadmin&password=superadmin"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
-[GIN-debug] POST   /admin/sign-in            --> KYC/iternals/controller.AdminSingIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 15:53:26 | 200 |    1.391793ms |       127.0.0.1 | POST     "/admin/sign-in?login=superadmin&password=superadmin"
-[GIN] 2025/06/28 - 15:53:40 | 401 |    1.569034ms |       127.0.0.1 | POST     "/admin/sign-in?login=test&password=qweasd"
-[GIN] 2025/06/28 - 15:53:47 | 200 |    1.110981ms |       127.0.0.1 | POST     "/admin/sign-in?login=superadmin&password=superadmin"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] POST   /verification/info        --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
-[GIN-debug] POST   /admin/sign-in            --> KYC/iternals/controller.AdminSingIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2025/06/28 - 16:43:35 | 404 |     668.935µs |       127.0.0.1 | POST     "/auth/sign-in?login=testlogin&password=testpassword"
-[GIN] 2025/06/28 - 16:43:47 | 200 |    9.977204ms |       127.0.0.1 | POST     "/auth/sign-up?login=testlogin&password=testpassword"
-[GIN] 2025/06/28 - 16:44:19 | 200 |     393.157µs |       127.0.0.1 | POST     "/auth/sign-in?login=testlogin&password=testpassword"
-[GIN] 2025/06/28 - 16:46:59 | 404 |         871ns |       127.0.0.1 | GET      "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
-[GIN] 2025/06/28 - 16:47:01 | 404 |         561ns |       127.0.0.1 | GET      "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
-[GIN] 2025/06/28 - 16:47:21 | 200 |   10.297324ms |       127.0.0.1 | POST     "/verification/info?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJsb2dpbiI6InRlc3Rsb2dpbiIsImlzcyI6IktZQyJ9.XJUIU475RGGmMBsglrZXWk7ib-Y91BWa4-ZTrwWuYto&name=amirjon&surname=kadirov&male=male&age=20"
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] POST   /auth/sign-up             --> KYC/iternals/controller.SignUp (3 handlers)
-[GIN-debug] POST   /auth/sign-in             --> KYC/iternals/controller.SignIn (3 handlers)
-[GIN-debug] PUT    /verify/info              --> KYC/iternals/controller.UpdateAccountInfo (3 handlers)
-[GIN-debug] POST   /admin/create-admin       --> KYC/iternals/controller.CreateAdmin (3 handlers)
-[GIN-debug] POST   /admin/sign-in            --> KYC/iternals/controller.AdminSingIn (3 handlers)
-[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
-Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :8080
+INFO: 2025/06/29 07:37:47 main.go:22: Logger established succesfully
+INFO: 2025/06/29 07:37:47 main.go:28: Connection to database established successfully
+INFO: 2025/06/29 07:37:48 main.go:34: Migrations completed successfully
+INFO: 2025/06/29 07:39:18 account.go:51: [account | /info]: 200 | Ok
+INFO: 2025/06/29 11:04:33 main.go:28: Logger established succesfully
+INFO: 2025/06/29 11:04:33 main.go:34: Connection to database established successfully
+INFO: 2025/06/29 11:04:33 main.go:40: Migrations completed successfully
+INFO: 2025/06/29 11:08:36 main.go:28: Logger established succesfully
+INFO: 2025/06/29 11:08:36 main.go:34: Connection to database established successfully
+INFO: 2025/06/29 11:08:36 main.go:40: Migrations completed successfully
+INFO: 2025/06/29 11:09:34 main.go:28: Logger established succesfully
+INFO: 2025/06/29 11:09:34 main.go:34: Connection to database established successfully
+INFO: 2025/06/29 11:09:34 main.go:40: Migrations completed successfully
+INFO: 2025/06/29 11:12:37 main.go:28: Logger established succesfully
+INFO: 2025/06/29 11:12:37 main.go:34: Connection to database established successfully
+INFO: 2025/06/29 11:12:37 main.go:40: Migrations completed successfully
+INFO: 2025/06/29 11:15:24 main.go:28: Logger established succesfully
+INFO: 2025/06/29 11:15:24 main.go:34: Connection to database established successfully
+INFO: 2025/06/29 11:15:24 main.go:40: Migrations completed successfully
+INFO: 2025/06/29 11:18:15 main.go:22: Logger established succesfully
+INFO: 2025/06/29 11:18:15 main.go:28: Connection to database established successfully
+INFO: 2025/06/29 11:18:15 main.go:34: Migrations completed successfully
+INFO: 2025/06/29 11:18:30 main.go:22: Logger established succesfully
+INFO: 2025/06/29 11:18:30 main.go:28: Connection to database established successfully
+INFO: 2025/06/29 11:18:30 main.go:34: Migrations completed successfully
+INFO: 2025/06/29 11:22:48 main.go:29: Logger established succesfully
+INFO: 2025/06/29 11:22:48 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 11:22:48 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 11:25:03 main.go:29: Logger established succesfully
+INFO: 2025/06/29 11:25:03 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 11:25:03 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 11:26:52 main.go:29: Logger established succesfully
+INFO: 2025/06/29 11:26:52 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 11:26:52 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 11:27:15 main.go:29: Logger established succesfully
+INFO: 2025/06/29 11:27:15 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 11:27:15 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 13:52:03 main.go:29: Logger established succesfully
+INFO: 2025/06/29 13:52:03 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 13:52:03 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 13:54:31 main.go:29: Logger established succesfully
+INFO: 2025/06/29 13:54:31 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 13:54:31 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 13:54:59 main.go:29: Logger established succesfully
+INFO: 2025/06/29 13:54:59 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 13:54:59 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 13:56:11 main.go:29: Logger established succesfully
+INFO: 2025/06/29 13:56:11 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 13:56:12 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 13:58:20 main.go:29: Logger established succesfully
+INFO: 2025/06/29 13:58:20 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 13:58:20 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:00:33 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:00:33 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:00:33 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:03:03 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:03:03 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:03:03 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:04:21 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:04:21 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:04:21 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:50:29 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:50:29 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:50:29 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:51:05 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:51:05 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:51:05 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:51:34 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:51:34 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:51:34 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:53:08 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:53:08 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:53:08 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:53:35 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:53:35 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:53:35 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:56:38 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:56:38 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:56:38 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:56:58 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:56:58 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:56:58 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:57:34 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:57:34 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:57:34 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 14:58:21 main.go:29: Logger established succesfully
+INFO: 2025/06/29 14:58:21 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 14:58:21 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 15:05:18 main.go:29: Logger established succesfully
+INFO: 2025/06/29 15:05:18 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 15:05:18 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 15:06:06 main.go:29: Logger established succesfully
+INFO: 2025/06/29 15:06:06 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 15:06:06 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 15:07:54 main.go:29: Logger established succesfully
+INFO: 2025/06/29 15:07:54 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 15:07:54 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 15:24:11 main.go:29: Logger established succesfully
+INFO: 2025/06/29 15:24:11 main.go:35: Connection to database established successfully
+INFO: 2025/06/29 15:24:11 main.go:41: Migrations completed successfully
+INFO: 2025/06/29 15:25:40 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:25:40 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:25:40 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:27:11 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:27:11 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:27:11 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:41:07 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:41:07 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:41:07 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:43:20 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:43:20 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:43:20 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:50:28 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:50:28 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:50:28 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:50:53 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:50:53 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:50:53 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:52:27 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:52:27 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:52:27 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:54:02 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:54:02 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:54:02 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 15:54:43 main.go:32: Logger established succesfully
+INFO: 2025/06/29 15:54:43 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 15:54:44 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 16:23:47 main.go:32: Logger established succesfully
+INFO: 2025/06/29 16:23:47 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 16:23:47 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 18:33:31 main.go:32: Logger established succesfully
+INFO: 2025/06/29 18:33:31 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 18:33:31 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 18:34:09 main.go:32: Logger established succesfully
+INFO: 2025/06/29 18:34:09 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 18:34:09 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 18:36:58 main.go:32: Logger established succesfully
+INFO: 2025/06/29 18:36:58 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 18:36:59 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 18:37:53 main.go:32: Logger established succesfully
+INFO: 2025/06/29 18:37:53 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 18:37:53 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 18:40:20 main.go:32: Logger established succesfully
+INFO: 2025/06/29 18:40:20 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 18:40:20 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 19:39:54 main.go:32: Logger established succesfully
+INFO: 2025/06/29 19:39:54 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 19:39:54 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 19:42:19 main.go:32: Logger established succesfully
+INFO: 2025/06/29 19:42:19 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 19:42:19 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 19:43:56 main.go:32: Logger established succesfully
+INFO: 2025/06/29 19:43:56 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 19:43:57 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:04:00 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:04:00 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:04:00 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:06:25 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:06:25 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:06:25 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:18:29 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:18:29 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:18:29 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:33:58 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:33:58 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:33:58 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:38:28 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:38:28 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:38:28 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:39:42 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:39:42 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:39:42 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 20:43:15 main.go:32: Logger established succesfully
+INFO: 2025/06/29 20:43:15 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 20:43:15 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 21:30:41 main.go:32: Logger established succesfully
+INFO: 2025/06/29 21:30:41 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 21:30:41 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 21:31:31 main.go:32: Logger established succesfully
+INFO: 2025/06/29 21:31:31 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 21:31:31 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 21:31:42 main.go:32: Logger established succesfully
+INFO: 2025/06/29 21:31:42 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 21:31:42 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 21:32:12 main.go:32: Logger established succesfully
+INFO: 2025/06/29 21:32:12 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 21:32:12 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 21:51:14 main.go:32: Logger established succesfully
+INFO: 2025/06/29 21:51:14 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 21:51:14 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 22:01:21 main.go:32: Logger established succesfully
+INFO: 2025/06/29 22:01:21 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 22:01:21 main.go:44: Migrations completed successfully
+INFO: 2025/06/29 22:01:55 main.go:32: Logger established succesfully
+INFO: 2025/06/29 22:01:55 main.go:38: Connection to database established successfully
+INFO: 2025/06/29 22:01:55 main.go:44: Migrations completed successfully

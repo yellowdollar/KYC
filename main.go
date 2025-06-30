@@ -6,8 +6,18 @@ import (
 	"KYC/iternals/db"
 	"KYC/logger"
 	"log"
+
+	_ "KYC/docs"
 )
 
+// @title KYC API docs
+// @version 1.0
+// @description None
+// @host 127.0.0.1:8080
+// @securityDefinitions.apikey ApiKeyAuth
+// @BasePath /
+// @in header
+// @name Authorization
 func main() {
 
 	// Reading app configs

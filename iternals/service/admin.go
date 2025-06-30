@@ -3,28 +3,35 @@ package service
 import (
 	"KYC/iternals/models"
 	"KYC/iternals/repository"
-	"KYC/utils"
 )
 
-func CreateAdmin(a models.Admin) (*models.Admin, error) {
-
-	a.Password = utils.GenerateHash(a.Password)
-
-	admin, err := repository.CreateAdmin(a)
+func CheckRole(userID int) (bool, error) {
+	userRole, err := repository.CheckRoleByUserID(userID)
 	if err != nil {
-		return nil, err
+		return false, err
 	}
 
-	return admin, nil
+	if userRole != "admin" {
+		return false, nil
+	}
+
+	return true, nil
 }
 
-func GetAdminByLogin(login string) (*models.Admin, error) {
-
-	admin, err := repository.GetAdminByLogin(login)
+func GetUsers(userID string, filterStatus string) ([]models.User, error) {
+	users, err := repository.GetUsers(userID, filterStatus)
 	if err != nil {
 		return nil, err
 	}
 
-	return admin, nil
+	return users, nil
+}
 
+func ConfirmUserIdentifyStatus(userID int) (*models.User, error) {
+	user, err := repository.ConfirmUserIdentifyStatus(userID)
+	if err != nil {
+		return nil, err
+	}
+
+	return user, err
 }

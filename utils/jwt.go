@@ -12,10 +12,11 @@ import (
 type CustomClaims struct {
 	UserID int    `json:"user_id"`
 	Login  string `json:"login"`
+	Role   string `json:"role"`
 	jwt.StandardClaims
 }
 
-func GenerateToken(userID int, login string) (string, error) {
+func GenerateToken(userID int, login string, role string) (string, error) {
 	claims := CustomClaims{
 		UserID: userID,
 		Login:  login,

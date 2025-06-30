@@ -2,10 +2,14 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func RunServer() error {
 	router := gin.Default()
+
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	authGroup := router.Group("/auth")
 	{
@@ -13,15 +17,34 @@ func RunServer() error {
 		authGroup.POST("/sign-in", SignIn)
 	}
 
-	infoGroup := router.Group("/verify")
+	profile := router.Group("/profile", CheckUserAuth)
+
+	profileGroup := profile.Group("/")
 	{
-		infoGroup.PUT("/info", UpdateAccountInfo)
+		profileGroup.PUT("/update", UpdateUserInfo)
+		profileGroup.GET("/get", GetUserInfoByID)
 	}
 
-	adminGroup := router.Group("/admin")
+	user := router.Group("/user", CheckUserAuth)
+
+	userGroup := user.Group("/")
 	{
-		adminGroup.POST("/create", CreateAdmin)
-		adminGroup.POST("/sign-in", AdminSingIn)
+		userGroup.GET("/info", GetInfo)
+	}
+
+	documents := router.Group("/documents", CheckUserAuth)
+
+	documentsGroup := documents.Group("/")
+	{
+		documentsGroup.POST("/update", UpdateDocuments)
+	}
+
+	admin := router.Group("/admin", CheckUserAuth)
+
+	adminGroup := admin.Group("/")
+	{
+		adminGroup.GET("/users", GetUsers)
+		adminGroup.PUT("/confirm", ConfirmIdentification)
 	}
 
 	router.Run(":8080")

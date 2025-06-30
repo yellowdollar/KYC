@@ -1,0 +1,272 @@
+definitions:
+  models.ProfileUpdate:
+    properties:
+      age:
+        description: Profile age
+        type: integer
+      gender:
+        description: Profile gender
+        type: string
+      name:
+        description: Profile name
+        type: string
+      surname:
+        description: Profile surname
+        type: string
+    type: object
+  models.UserSignIn:
+    properties:
+      login:
+        description: UserSignIn login
+        type: string
+      password:
+        description: UserSignIn password
+        type: string
+    type: object
+  models.UserSignUp:
+    properties:
+      login:
+        description: User login
+        type: string
+      password:
+        description: User password
+        type: string
+    type: object
+host: 127.0.0.1:8080
+info:
+  contact: {}
+  description: None
+  title: KYC API docs
+  version: "1.0"
+paths:
+  /admin/confirm:
+    put:
+      description: Confirm endpoint
+      parameters:
+      - description: user_id
+        in: query
+        name: user_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin
+  /admin/users:
+    get:
+      parameters:
+      - description: Filter Status
+        in: query
+        name: filter_status
+        type: string
+      - description: Filter user id
+        in: query
+        name: filter_user_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin
+  /auth/sign-in:
+    post:
+      description: Sign In endpoint
+      parameters:
+      - description: User Data
+        in: body
+        name: userSignIn
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserSignIn'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      tags:
+      - Auth
+  /auth/sign-up:
+    post:
+      consumes:
+      - application/json
+      description: Login & password registration
+      parameters:
+      - description: User data
+        in: body
+        name: userSignUp
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserSignUp'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      tags:
+      - Auth
+  /documents/update:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Upload front | back | selfie ID photo
+      parameters:
+      - description: Front side of ID
+        in: formData
+        name: front
+        required: true
+        type: file
+      - description: Back side of ID
+        in: formData
+        name: back
+        required: true
+        type: file
+      - description: Selfie side if ID
+        in: formData
+        name: selfie
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Upload user documents
+      tags:
+      - documents
+  /profile/get:
+    get:
+      description: GetUserInfo endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - profile
+  /profile/update:
+    put:
+      description: UpdateUserInfo endpoint
+      parameters:
+      - description: Profile data
+        in: body
+        name: profileUpdate
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProfileUpdate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - profile
+  /user/info:
+    get:
+      description: get user information endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - user
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

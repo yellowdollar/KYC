@@ -19,7 +19,7 @@ func CreateUser(u models.User) (*models.User, error) {
 	}
 
 	// After creating user row, creates account row
-	err = repository.CreateUserAccount(int(result.ID))
+	err = repository.CreateUserProfile(int(result.ID))
 	if err != nil {
 		return nil, err
 	}
@@ -39,4 +39,38 @@ func GetUserByLogin(userLogin string) (*models.User, error) {
 
 func ComparePasswords(inputPassword string, hashedPassword string) bool {
 	return utils.GenerateHash(inputPassword) == hashedPassword
+}
+
+// func CheckVerificationStatus(userID int) (string, error) {
+// 	uVerification, err := repository.GetUserVerificationStatus(userID)
+// 	if err != nil {
+// 		return "", err
+// 	}
+
+// 	switch uVerification {
+// 	case "unverified":
+// 		return "unverified", nil
+// 	case "pending":
+// 		return "pending", nil
+// 	}
+
+// 	return "verified", nil
+// }
+
+func GetUserByID(userID int) (*models.User, error) {
+	user, err := repository.GetUserByID(userID)
+	if err != nil {
+		return nil, err
+	}
+
+	return user, nil
+}
+
+func UpdateUserIdentification(userID int) (*models.User, error) {
+	user, err := repository.UpdateUserIdentification(userID)
+	if err != nil {
+		return nil, err
+	}
+
+	return user, nil
 }

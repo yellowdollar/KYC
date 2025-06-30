@@ -5,14 +5,14 @@ import (
 	"KYC/iternals/models"
 )
 
-func CreateAccountDocuments(accountID int) (*models.Documents, error) {
+func CreateProfileDocuments(profileID int) (*models.Documents, error) {
 	dbcon, err := db.GetDBConn()
 	if err != nil {
 		return nil, err
 	}
 
 	var d = models.Documents{
-		AccountID: accountID,
+		ProfileID: profileID,
 	}
 
 	result := dbcon.Create(&d)
@@ -23,7 +23,7 @@ func CreateAccountDocuments(accountID int) (*models.Documents, error) {
 	return &d, nil
 }
 
-func GetAccountDocumentsByAccountId(accountID int) (*models.Documents, error) {
+func GetDocumentsByProfileID(profileID int) (*models.Documents, error) {
 	dbcon, err := db.GetDBConn()
 	if err != nil {
 		return nil, err
@@ -31,33 +31,33 @@ func GetAccountDocumentsByAccountId(accountID int) (*models.Documents, error) {
 
 	var d models.Documents
 
-	result := dbcon.Where("account_id = ?", accountID).First(&d)
+	result := dbcon.Where("profile_id = ?", profileID).Take(&d)
 	if result.Error != nil {
-		return nil, err
+		return nil, result.Error
 	}
 
 	return &d, nil
 }
 
-func InsertAccountDocuments(accountID int, d models.Documents) (*models.Documents, error) {
+func UpdateProfileDocuments(profileID int, d models.Documents) (*models.Documents, error) {
 	dbcon, err := db.GetDBConn()
 	if err != nil {
 		return nil, err
 	}
 
-	accountDocs, err := GetAccountDocumentsByAccountId(accountID)
+	docs, err := GetDocumentsByProfileID(profileID)
 	if err != nil {
 		return nil, err
 	}
 
-	accountDocs.Front = d.Front
-	accountDocs.Back = d.Back
-	accountDocs.Selfie = d.Selfie
+	docs.Front = d.Front
+	docs.Back = d.Back
+	docs.Selfie = d.Selfie
 
-	result := dbcon.Save(&accountDocs)
+	result := dbcon.Save(&docs)
 	if result.Error != nil {
 		return nil, result.Error
 	}
 
-	return accountDocs, nil
+	return docs, nil
 }
