@@ -14,5 +14,5 @@
 
 ### Infrastructure
 - Docker
-- Redis
-- Kafka
+- Redis - IN PROCCESS 
+- Kafka - IN PROCCESS
