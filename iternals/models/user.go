@@ -4,10 +4,11 @@ import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
-	Login        string `json:"login"              gorm:"uniqueIndex"`
-	Password     string `json:"-"`
-	Role         string `json:"role"               gorm:"default:'user'"`
-	IsIdentified string `json:"is_identified"      gorm:"default:'unidentified'"`
+	Login        string  `json:"login"              gorm:"uniqueIndex"`
+	Password     string  `json:"-"`
+	Role         string  `json:"role"               gorm:"default:'user'"`
+	IsIdentified string  `json:"is_identified"      gorm:"default:'unidentified'"`
+	Profile      Profile `json:"profile"            gorm:"foreignKey:UserID"`
 }
 
 type UserSignUp struct {

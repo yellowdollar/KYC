@@ -7,7 +7,6 @@ type Profile struct {
 	Gender  string `json:"gender"`
 	Age     int    `json:"age"`
 	UserID  uint   `json:"user_id"`
-	User    User   `json:"-" gorm:"foreignKey:UserID"`
 }
 
 type ProfileUpdate struct {

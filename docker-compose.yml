@@ -14,5 +14,7 @@ services:
       - "8000:8080"
     depends_on:
       - db
+    volumes:
+      - ./files:/app/files
     env_file:
       - .env

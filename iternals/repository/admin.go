@@ -32,7 +32,7 @@ func GetUsers(userID string, filterStatus string) ([]models.User, error) {
 
 	var users []models.User
 
-	query := dbcon.Where("role <> ?", "admin")
+	query := dbcon.Preload("Profile").Where("role <> ?", "admin")
 
 	if userID != "" {
 		userIDint, err := strconv.Atoi(userID)
@@ -45,9 +45,8 @@ func GetUsers(userID string, filterStatus string) ([]models.User, error) {
 		query = query.Where("is_identified = ?", filterStatus)
 	}
 
-	query.Find(&users)
-	if query.Error != nil {
-		return nil, query.Error
+	if err := query.Find(&users).Error; err != nil {
+		return nil, err
 	}
 
 	return users, nil
