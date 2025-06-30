@@ -26,3 +26,5 @@ ERROR: 2025/06/30 10:45:07 main.go:36: error while connecting to database
 ERROR: 2025/06/30 10:45:07 main.go:42: error while making migrations
 ERROR: 2025/06/30 10:47:43 main.go:36: error while connecting to database
 ERROR: 2025/06/30 10:47:43 main.go:42: error while making migrations
+ERROR: 2025/06/30 16:03:33 main.go:36: error while connecting to database
+ERROR: 2025/06/30 16:03:33 main.go:42: error while making migrations

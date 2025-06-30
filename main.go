@@ -13,7 +13,7 @@ import (
 // @title KYC API docs
 // @version 1.0
 // @description None
-// @host 127.0.0.1:8080
+// @host 127.0.0.1:8000
 // @securityDefinitions.apikey ApiKeyAuth
 // @BasePath /
 // @in header

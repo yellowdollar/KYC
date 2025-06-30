@@ -21,7 +21,7 @@
         "server_name": "KYC" 
     },
     "postgres_params": {
-        "host": "localhost",
+        "host": "db",
         "port": "5432",
         "user": "postgres",
         "database": "kyc_db"
