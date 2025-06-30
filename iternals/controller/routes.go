@@ -48,7 +48,10 @@ func RunServer() error {
 	{
 		adminGroup.GET("/users", GetUsers)
 		adminGroup.PUT("/confirm", ConfirmIdentification)
+		adminGroup.GET("/user-docs", GetUserDocsByUserID)
 	}
+
+	router.GET("/upload", Upload)
 
 	router.Run(":8080")
 

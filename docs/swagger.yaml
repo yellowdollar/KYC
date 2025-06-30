@@ -66,6 +66,47 @@ paths:
       - ApiKeyAuth: []
       tags:
       - admin
+  /admin/user-docs:
+    get:
+      description: Returns paths to user documents if they exist
+      parameters:
+      - description: User ID
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get user documents by user ID
+      tags:
+      - admin
   /admin/users:
     get:
       parameters:
@@ -242,6 +283,32 @@ paths:
       - ApiKeyAuth: []
       tags:
       - profile
+  /upload:
+    get:
+      parameters:
+      - description: Full path to the file
+        in: query
+        name: file_path
+        required: true
+        type: string
+      produces:
+      - application/octet-stream
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: upload files
+      tags:
+      - upload
   /user/info:
     get:
       description: get user information endpoint
