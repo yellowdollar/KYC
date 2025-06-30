@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"KYC/iternals/models"
 	"KYC/iternals/service"
 	"net/http"
 
@@ -30,6 +31,13 @@ func GetInfo(c *gin.Context) {
 		return
 	}
 
+	uWp := models.UserWithoutProfile{
+		ID:           u.ID,
+		Login:        u.Login,
+		Role:         u.Role,
+		IsIdentified: u.IsIdentified,
+	}
+
 	p, err := service.GetProfileByUserID(int(u.ID))
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusNotFound, gin.H{
@@ -42,7 +50,7 @@ func GetInfo(c *gin.Context) {
 
 	c.JSON(200, gin.H{
 		"status_code": 200,
-		"user":        u,
+		"user":        uWp,
 		"profile":     p,
 	})
 }

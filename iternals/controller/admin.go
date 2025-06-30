@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"KYC/iternals/models"
 	"KYC/iternals/service"
 	"fmt"
 	"net/http"
@@ -114,10 +115,17 @@ func ConfirmIdentification(c *gin.Context) {
 		return
 	}
 
+	uWp := models.UserWithoutProfile{
+		ID:           result.ID,
+		Login:        result.Login,
+		Role:         result.Role,
+		IsIdentified: result.IsIdentified,
+	}
+
 	c.JSON(200, gin.H{
 		"status_code": 200,
 		"message":     "User identified successfully",
-		"data":        result,
+		"data":        uWp,
 	})
 
 }

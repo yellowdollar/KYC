@@ -11,6 +11,13 @@ type User struct {
 	Profile      Profile `json:"profile"            gorm:"foreignKey:UserID"`
 }
 
+type UserWithoutProfile struct {
+	ID           uint   `json:"id"`
+	Login        string `json:"login"`
+	Role         string `json:"role"`
+	IsIdentified string `json:"is_identified"`
+}
+
 type UserSignUp struct {
 	Login    string `json:"login"`    // User login
 	Password string `json:"password"` // User password
