@@ -194,3 +194,18 @@ INFO: 2025/06/29 22:01:21 main.go:44: Migrations completed successfully
 INFO: 2025/06/29 22:01:55 main.go:32: Logger established succesfully
 INFO: 2025/06/29 22:01:55 main.go:38: Connection to database established successfully
 INFO: 2025/06/29 22:01:55 main.go:44: Migrations completed successfully
+INFO: 2025/06/30 10:45:07 main.go:32: Logger established succesfully
+INFO: 2025/06/30 10:45:07 main.go:38: Connection to database established successfully
+INFO: 2025/06/30 10:45:07 main.go:44: Migrations completed successfully
+INFO: 2025/06/30 10:47:43 main.go:32: Logger established succesfully
+INFO: 2025/06/30 10:47:43 main.go:38: Connection to database established successfully
+INFO: 2025/06/30 10:47:43 main.go:44: Migrations completed successfully
+INFO: 2025/06/30 10:49:14 main.go:32: Logger established succesfully
+INFO: 2025/06/30 10:49:14 main.go:38: Connection to database established successfully
+INFO: 2025/06/30 10:49:14 main.go:44: Migrations completed successfully
+INFO: 2025/06/30 11:51:55 main.go:32: Logger established succesfully
+INFO: 2025/06/30 11:51:55 main.go:38: Connection to database established successfully
+INFO: 2025/06/30 11:51:55 main.go:44: Migrations completed successfully
+INFO: 2025/06/30 12:03:42 main.go:32: Logger established succesfully
+INFO: 2025/06/30 12:03:42 main.go:38: Connection to database established successfully
+INFO: 2025/06/30 12:03:42 main.go:44: Migrations completed successfully
